@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title%} {{post.title}}{% endblock title%}
+
+{% block content %}
+
+<h1>{{post.title}}</h1><br/>
+<small>By : {{post.author}} - {{post.date}} - <a href="{% url 'post-update' post.pk%}">(Edit)</a> | <a href="{% url 'post-delete' post.pk%}">(Delete)</a></small>
+<hr/><br/>
+{{post.text}}
+<br/><br/><br/>
+<a href="{% url 'home' %}" class = 'btn btn-secondary'>Back</a>
+
+{% endblock%}
