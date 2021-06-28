@@ -4,6 +4,8 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
+
 <h1>Update post...</h1>
 <br/><br/>
 <form method="POST">
@@ -12,5 +14,12 @@
 
 	<button class="btn btn-outline-primary">Update</button>
 </form>
+
+{% else %}
+<div class="alert alert-danger" role="alert">
+  You are not logged in!!!
+</div>
+
+{% endif%}
 
 {% endblock%}
