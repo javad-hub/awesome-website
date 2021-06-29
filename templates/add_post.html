@@ -15,6 +15,12 @@
 	<button class="btn btn-outline-success">Post</button>
 </form>
 
+<script>
+	var name = "{{ user.id }}";
+	document.getElementById("user").value
+		= name;
+</script>
+
 {% else %}
 	<div class="alert alert-danger" role="alert">
 	 	 You are not logged in!!!
