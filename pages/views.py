@@ -25,13 +25,10 @@ class HomeView(ListView):
 	ordering = ['-date']
 
 	def get_context_data(self, *args, **kwargs):
-		cat_menu = Category.objects.all()
-		context = super(HomeView, self).get_context_data(*args, **kwargs)
-		context["cat_menu"] = cat_menu
-		stuff = get_object_or_404(Post, id=self.kwargs['pk'])
-	    total_likes = stuff.total_likes()
-	    context["total_likes"] = total_likes
-		return context
+	 cat_menu = Category.objects.all()
+	 context = super(HomeView, self).get_context_data(*args, **kwargs)
+	 context["cat_menu"] = cat_menu
+	 return context
 
 
 def CategoryView(request, cats):

@@ -16,7 +16,7 @@
 		</small>
 		{% endif%}
 		<br/>
-		{{post.text}}
+		{{post.text|safe}}
 	</li>
 </ul>
 {% endfor %}
