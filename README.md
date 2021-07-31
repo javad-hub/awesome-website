@@ -1,2 +1,2 @@
 # awesome-website
-built with help of codemy.com
+built with help of <a href="http://johnelder.com/">codemy.com</a>
